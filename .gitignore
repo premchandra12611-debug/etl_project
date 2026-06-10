@@ -1,0 +1,39 @@
+# Environment and secrets
+.env
+.env.*
+*.local
+
+# Local virtual environments
+etl_project_main_venv/
+.venv/
+venv/
+env/
+
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Build and packaging output
+build/
+dist/
+*.egg-info/
+
+# Test and coverage output
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local database exports and generated data
+*.dump
+*.backup
+*.bak
+mysql_exports/
+data_exports/
+
+# Jupyter/editor/OS noise
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
