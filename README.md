@@ -146,3 +146,5 @@ MYSQL_DATABASE=sales_analytics
 ```
 
 If `mysql` is not recognized in PowerShell, import the seed file through MySQL Workbench or add the MySQL `bin` directory to your PATH.
+
+author:premchandra
