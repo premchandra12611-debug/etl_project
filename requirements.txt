@@ -6,3 +6,5 @@ google-cloud-bigquery
 google-cloud-bigquery-storage
 db-dtypes
 python-dotenv
+
+psycopg2-binary

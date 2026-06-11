@@ -9,7 +9,8 @@ from config import (
     MYSQL_CFG,
 )
 from extract import extract_from_mysql
-from load import load_to_mysql
+#from load import load_to_mysql
+from load import load_to_postgres
 from logger import setup_logger
 from transform import clean_and_enrich
 
@@ -18,11 +19,12 @@ log = setup_logger(__name__)
 
 
 def run() -> None:
-    log.info("Pipeline B: MySQL -> MySQL started")
+    log.info("Pipeline B: MySQL -> PostgreSQL started")
     try:
         raw_df = extract_from_mysql()
         clean_df = clean_and_enrich(raw_df)
-        load_to_mysql(clean_df)
+        #load_to_mysql(clean_df)
+        load_to_postgres(clean_df)
         log.info("Pipeline B completed")
     except OperationalError as exc:
         errno = getattr(exc.orig, "args", [None])[0]
